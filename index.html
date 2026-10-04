@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Beasts of burden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">FAOSTAT stocks, 2024</p>
+      <h1>Beasts of burden</h1>
+      <p class="lede">Mules, donkeys, horses, camels, and cattle. Pick a beast, then a country.</p>
+      <div class="rainbow" aria-hidden="true"></div>
+    </header>
+
+    <section class="controls" aria-label="What to show">
+      <div class="animals" id="animals" role="radiogroup" aria-label="Animal"></div>
+    </section>
+
+    <p class="status" id="status" role="status"></p>
+
+    <figure class="map-frame" id="frame">
+      <div id="map"></div>
+      <figcaption>
+        <span id="legend"></span>
+        <span id="hover">Hover a country</span>
+      </figcaption>
+    </figure>
+
+    <section class="ranks" aria-label="Rankings">
+      <div>
+        <h2>Most animals</h2>
+        <table>
+          <thead>
+            <tr><th scope="col">Country</th><th class="num" scope="col">Head</th></tr>
+          </thead>
+          <tbody id="top-count"></tbody>
+        </table>
+      </div>
+      <div>
+        <h2>Most per 1,000 people</h2>
+        <table>
+          <thead>
+            <tr><th scope="col">Country</th><th class="num" scope="col">Per 1,000</th></tr>
+          </thead>
+          <tbody id="top-rate"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>Counts are animals in stock in 2024. Cattle is the whole herd, not only oxen.</p>
+      <p>Animals: <a href="https://data.fao.org/catalog/iso/f6a1fca8-3c0d-46a3-9aeb-3e81bbfd38c8">FAOSTAT live animals</a>, CC BY 4.0. People: <a href="https://data.worldbank.org/indicator/SP.POP.TOTL">World Bank</a>, total population.</p>
+    </footer>
+  </main>
+  <script src="world.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
